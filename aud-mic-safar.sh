@@ -63,18 +63,18 @@ main() {
     done
 
     # 3. GitHubdan kompilyatsiya
-    echo -e "\n${BLUE}[3/8] ALSA manba kodi kompilyatsiya qilinmoqda...${NC}"
-    temp_dir=$(mktemp -d)
-    cd "$temp_dir"
+    # echo -e "\n${BLUE}[3/8] ALSA manba kodi kompilyatsiya qilinmoqda...${NC}"
+    # temp_dir=$(mktemp -d)
+    # cd "$temp_dir"
     
-    if check_url "https://github.com/alsa-project/alsa-lib.git" "ALSA manba kodi"; then
-        git clone https://github.com/alsa-project/alsa-lib.git
-        cd alsa-lib
-        ./configure
-        make -j$(nproc)
-        make install
-        ldconfig
-    fi
+    # if check_url "https://github.com/alsa-project/alsa-lib.git" "ALSA manba kodi"; then
+    #     git clone https://github.com/alsa-project/alsa-lib.git
+    #     cd alsa-lib
+    #     ./configure
+    #     make -j$(nproc)
+    #     make install
+    #     ldconfig
+    # fi
 
     # 4. .deb paketlar - yangi URL bilan
     echo -e "\n${BLUE}[4/8] PulseAudio qo'shimcha modullari...${NC}"
